@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="nextQuestion" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.miu.mpp.qms.controller.QuizController">
+   <children>
+      <Pane prefHeight="45.0" prefWidth="400.0" style="-fx-background-color: #191970;">
+         <children>
+            <Button fx:id="logout" layoutX="336.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Logout" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Text fx:id="quiztitle" layoutX="177.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 700;" text="Quiz 1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="questiontext" cache="true" disable="true" layoutX="18.0" layoutY="100.0" prefHeight="60.0" prefWidth="359.0" promptText="Question">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font></TextArea>
+      
+      <RadioButton fx:id="opt1" layoutX="27.0" layoutY="171.0" mnemonicParsing="false" text="Option1">
+         <toggleGroup>
+            <ToggleGroup fx:id="roleGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="opt2" layoutX="27.0" layoutY="200.0" mnemonicParsing="false" text="Option2" toggleGroup="$roleGroup" />
+      <RadioButton fx:id="opt3" layoutX="27.0" layoutY="229.0" mnemonicParsing="false" text="Option3" toggleGroup="$roleGroup" />
+      <RadioButton fx:id="opt4" layoutX="27.0" layoutY="255.0" mnemonicParsing="false" text="Option4" toggleGroup="$roleGroup" />
+      
+      <Button fx:id="cancelButtonId" layoutX="39.0" layoutY="306.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="33.0" prefWidth="91.0" style="-fx-background-color: #FF0000;" text="Cancel" textFill="WHITE" />
+      <Button fx:id="SubmitButtonId" layoutX="269.0" layoutY="306.0" mnemonicParsing="false" onAction="#submittAction" prefHeight="33.0" prefWidth="91.0" style="-fx-background-color: #1E90FF;" text="Submitt" textFill="WHITE" />
+      <Button fx:id="nextButtonId" layoutX="155.0" layoutY="306.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="33.0" prefWidth="91.0" style="-fx-background-color: #1E90FF;" text="Next" textFill="WHITE" />
+   </children>
+</AnchorPane>
